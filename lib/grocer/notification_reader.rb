@@ -28,7 +28,7 @@ module Grocer
       payload[:device_token] = @io.read(32).unpack("H*").first
 
       payload_length = @io.read(2).unpack("n").first
-      payload_hash = JSON.parse(@io.read(payload_length), symbolize_names: true)
+      payload_hash = JSON.parse(@io.read(payload_length), :symbolize_names => true)
 
       payload.merge!(payload_hash.delete(:aps) || { })
       payload[:custom] = payload_hash
