@@ -15,7 +15,7 @@ module Grocer
 
     def defaults
       {
-        port: 2195
+        :port => 2195
       }
     end
 

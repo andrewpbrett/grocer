@@ -39,10 +39,10 @@ module Grocer
     end
 
     def build_connection
-      Grocer::SSLConnection.new(certificate: certificate,
-                                passphrase: passphrase,
-                                gateway: gateway,
-                                port: port)
+      Grocer::SSLConnection.new(:certificate => certificate,
+                                :passphrase => passphrase,
+                                :gateway => gateway,
+                                :port => port)
     end
 
     def destroy_connection

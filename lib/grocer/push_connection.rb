@@ -18,8 +18,8 @@ module Grocer
 
     def defaults
       {
-        gateway: find_default_gateway,
-        port: 2195
+        :gateway => find_default_gateway,
+        :port => 2195
       }
     end
 
