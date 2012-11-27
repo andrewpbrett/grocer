@@ -45,7 +45,7 @@ module Grocer
       aps_hash[:badge] = badge if badge
       aps_hash[:sound] = sound if sound
 
-      { aps: aps_hash }.merge(custom || { })
+      { :aps => aps_hash }.merge(custom || { })
     end
 
     def expiry_epoch_time
